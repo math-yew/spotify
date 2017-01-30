@@ -63,6 +63,7 @@ button {
   color: #00ffd8;
   background-color: transparent;
   text-align: center;
+  cursor: pointer;
 
 }
 
@@ -150,6 +151,7 @@ h1{
   font-style: underline;
   z-index: 15;
   margin: 0px;
+  cursor: pointer;
 }
 
 .corner:hover {

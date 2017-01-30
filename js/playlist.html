@@ -14,12 +14,12 @@
   <div class = "row">
     <div class="track white"><h3>TRACKS</h3></div>
     <div class="artist white"><h3>ARTIST</h3></div>
-    <!-- <div class="artist white"><h3>x</h3></div> -->
   </div>
   <div class="tracks" ng-repeat="track in trackList">
     <div class = "row">
       <div class="track">{{track.track.name}}</div>
       <div class="artist">{{track.track.artists[0].name}}</div>
+      <p class="corner" ng-click="cutTrack(track.track.id)">x</p>
     </div>
   </div>
 

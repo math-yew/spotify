@@ -13,9 +13,12 @@ angular.module('spotify')
     console.log("token: ", token);
   }
 
-    // var token = "BQBq-b4559uaQMQ_jBOL5pOPtuXJB73seygJANOMPL7JCSwtpdY5-TEireJKyFew7Z2Orc4tk_MrhC0mwyLCzfkyuX3afTEyjeM2NHO2OVcyjz9OshTbepZOmQ7dSG26Cx-YwvG562avfn83xekdMrIcKWGpI1Jmmc96v4_40tWmmVEZez3bJQEveL4Dd3diyK5Y_OkOGDYBoyzRz6pbDbT3lR77Pf4n2FhcbaS5Md61RpCRYjXODIcf91yNVI36RU6lDPG70mr7sMZPksLG4Dz93V2TRvVhLJzNIkoVeM2pvOOFCIeuJUv7b9s-xw";
-
+    // var token = "BQDcMXA6EVlsXeFKiZdak_2mnmMHwC7TOWJhrHAvpttgjJ00b0F5gEhcav0Mi5_8Dq-zIUncfT5lNiEmxPZSMla1OTFYto6wc3hNgCHBoQ5_kjBR45NDnH6x-qpYjjMruW62qntryYFvcGHDRMhm6QpPqRjd5vBir-0Ez8GLLK3oKJut8VF8hN_gINT5lTzq50dMHBg0TLHUNUOkPKqDKT5vFRuv1nzK8wlobycWy_TJr_sTxzhs33J4si2HncaVoCQPO-o1M9CszSCAHwwpAVQ3t-sZlaLBNxLC1gpFxj3xEtnPlaJESYg1MaVKdg";
+    //
     // var userName = "spotifyforindie"
+
+
+
 /////////////////////// search ///////////////////////////
 
   this.searchPlaylists = function(search){
@@ -95,6 +98,10 @@ console.log(addUrl.length);
 }
 
 //////////////////////////////////////////////////////////////////
+
+this.cutInService = function (i) {
+  songList.splice(i,1);
+}
 
 //end
 })
