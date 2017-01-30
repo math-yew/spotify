@@ -4,19 +4,20 @@ angular.module('spotify')
     restrict: 'E',
     templateUrl: './js/directives/idDir.html',
     controller: function ($scope) {
-        $scope.flip = true;
-        $scope.toWords = function () {
-          $scope.flip = false;
-        }
-        $scope.toPic = function () {
-          $scope.flip = true;
-        }
+      $scope.toggle = false;
+      $scope.slide = function () {
+        $scope.toggle = !$scope.toggle;
+      }
+
       },
     link: function (scope, element, attr) {
-
-      $('.corner').on('click',function() {
-          $('.corner-fix').animate({'left':'100px'});
-        })
+      console.log(element);
+      // var corn = element.find('corner');
+      // var cornFix = element.find('corner-fix');
+      // console.log("my directive: ", corn, cornFix);
+      // corn.on('click',function() {
+      //     cornFix.animate({'left':'100px'});
+      //   })
       }
 
 //////end retern

@@ -1,6 +1,7 @@
-<div class="corner white">Have a playlist ID?</div>
-<div class="corner-fix">
+<div class="corner" ng-click="slide()" ><u>Have a playlist ID?</u></div>
+<div class="corner-fix" ng-class="{slideIn: toggle}">
 <form>
+  <div class="corner" ng-click="slide()" ><u>Hide</u></div>
   <input ng-model="customID" class="corner-input" placeholder="Enter Playlist ID">
   <input ng-model="customOwner" class="corner-input" placeholder="Enter Playlist Owner">
   <button type="button" class="corner-button" ui-sref="playlist({id: customID, userid: customOwner})">Go</button>

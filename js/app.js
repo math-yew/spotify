@@ -6,6 +6,7 @@ angular.module('spotify', ['ui.router'])
     $stateProvider
       .state('login', {
         url:'/login',
+        controller: 'loginCtrl',
         templateUrl: './js/login.html'
       })
       .state('search', {

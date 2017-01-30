@@ -6,13 +6,16 @@ angular.module('spotify')
   var token;
   this.userName = userName;
   this.token = token;
-  console.log("token: ", token);
-  var token = "BQAz7EhHH-e59EgNbAOdIruSMSR_NZjqUltTl5Nf-HO4ZIg8HmPVjMGZ6GfmoWh7ik0Jtv8UJgnnTLbcu_bRoYel_7wE4PiQ04gsdp7NBSG4s1J9FfumBjHSygboLniHcakn_wbilyElyqh8tbT-ZA0Hb2mQ2OIxXf_9h8xyVaG3sS3_eJOVO91ZrJF4ULGePHMM5l16tB51TSDLJGdLQZJ5t7jPQVqdIyut1tuwqs2MjBUPx0xT3asj70WdVYK1okrul-kN43T6CK86k-_KqqI1efhJJ0OpUQDvIKJ_t72RXEbp6YOQang5qwIevw";
 
   this.login = function (uname, tok) {
     userName = uname;
     token = tok;
+    console.log("token: ", token);
   }
+
+    // var token = "BQBq-b4559uaQMQ_jBOL5pOPtuXJB73seygJANOMPL7JCSwtpdY5-TEireJKyFew7Z2Orc4tk_MrhC0mwyLCzfkyuX3afTEyjeM2NHO2OVcyjz9OshTbepZOmQ7dSG26Cx-YwvG562avfn83xekdMrIcKWGpI1Jmmc96v4_40tWmmVEZez3bJQEveL4Dd3diyK5Y_OkOGDYBoyzRz6pbDbT3lR77Pf4n2FhcbaS5Md61RpCRYjXODIcf91yNVI36RU6lDPG70mr7sMZPksLG4Dz93V2TRvVhLJzNIkoVeM2pvOOFCIeuJUv7b9s-xw";
+
+    // var userName = "spotifyforindie"
 /////////////////////// search ///////////////////////////
 
   this.searchPlaylists = function(search){
@@ -57,7 +60,7 @@ this.songList = songList;
 
 
 this.newPlaylist = function(name){
-  var makeNew = "https://api.spotify.com/v1/users/spotifyforindie/playlists";
+  var makeNew = "https://api.spotify.com/v1/users/" + userName + "/playlists";
   // var pname = "p1";
 
   return $http({
@@ -79,7 +82,7 @@ this.addToPlaylist = function(playList){
   // var addSongs = ['5kPrfd9MMxfk9QhaKCuEcH', '51UsFqIs9gSo8paHAGPL4P'];
   var songTrim = songList.slice(0,85);
   var trackPrep = "spotify%3Atrack%3A"+songTrim.join(',spotify%3Atrack%3A');
-  var addUrl = "https://api.spotify.com/v1/users/spotifyforindie/playlists/" + playList + "/tracks?position=0&uris=" + trackPrep;
+  var addUrl = "https://api.spotify.com/v1/users/" + userName + "/playlists/" + playList + "/tracks?position=0&uris=" + trackPrep;
 console.log(addUrl.length);
   return $http({
     method: "POST",

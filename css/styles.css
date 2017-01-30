@@ -63,6 +63,12 @@ button {
   color: #00ffd8;
   background-color: transparent;
   text-align: center;
+
+}
+
+button:hover{
+  box-shadow: outset;
+  color: white;
 }
 
 
@@ -94,6 +100,8 @@ button {
   width: 300px;
   height: 360px;
   text-align: center;
+  color: white;
+  float: right;
 }
 
 h1{
@@ -137,20 +145,31 @@ h1{
 }
 
 .corner {
-  /*color: white;*/
+  color: white;
   float: right;
-  background-color: red;
+  font-style: underline;
+  z-index: 15;
+  margin: 0px;
+}
+
+.corner:hover {
+  color: darkgrey;
 }
 
 .corner-fix {
   width: 400px;
-  height: 50px;
+  height: 90px;
   padding: 5px;
   background-color: #00ffd8;
   border-color: white;
   border-radius: 5px;
-  position: fixed;
-  top: 30px;
+  position: absolute;
+  top: 0px;
+  right: -500px;
+  transition: 1s;
+}
+
+.slideIn {
   right: 0px;
 }
 
@@ -186,6 +205,36 @@ h1{
 
   .row {
     width: 80%;
+  }
+
+}
+
+@media (max-width: 550px) {
+
+
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .playlist-upper {
+float: none;
+
+  }
+
+  input {
+
+    width: 80%;
+
+  }
+
+  button {
+    min-width: 80%;
+
+  }
+
+  .search-results{
+
   }
 
 }

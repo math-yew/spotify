@@ -1,12 +1,12 @@
 <div class="main">
-  <p ui-sref="search">Search</p>
+  <p ui-sref="search" class="corner">Search</p>
   <div class="center">
     <div class="">
       <img src="./css/icon.png" alt="" class="icon">
     </div>
     <input type="text" ng-model="uname" class="login" placeholder="User Name"><br>
     <input type="text" ng-model="tok" class="login" placeholder="Token"><br><br>
-    <button type="button" ng-click="login()">Access Spotify</button>
+    <button type="button" ng-click="login(uname, tok)">Access Spotify</button>
     <!-- <button type="button" ng-click="login()" ui-sref="search">Access Spotify</button> -->
   </div>
 
