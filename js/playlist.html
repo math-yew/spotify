@@ -1,0 +1,25 @@
+<div class="main">
+  <div class="playlist-upper">
+    <h1 class="white">{{playName}}</h1>
+    <!-- <div class="image">
+      <img src="{{playImage}}" alt="">
+    </div> -->
+    <div class="">
+      <input ng-model="defaultName" type="text" name="" value="">
+      <button ng-click="newPlaylist()" type="button" name="button" ui-sref="confirm({confirm: defaultName})">Create Playlist</button>
+      <!-- <button ui-sref="confirm" type="button" name="button">Confirm Screen</button> -->
+    </div>
+  </div>
+
+  <div class = "row">
+    <div class="track white"><h3>TRACKS</h3></div>
+    <div class="artist white"><h3>ARTIST</h3></div>
+  </div>
+  <div class="tracks" ng-repeat="track in trackList">
+    <div class = "row">
+      <div class="track">{{track.track.name}}</div>
+      <div class="artist">{{track.track.artists[0].name}}</div>
+    </div>
+  </div>
+
+</div>

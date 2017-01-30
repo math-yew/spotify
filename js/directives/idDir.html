@@ -1,0 +1,8 @@
+<div class="corner white">Have a playlist ID?</div>
+<div class="corner-fix">
+<form>
+  <input ng-model="customID" class="corner-input" placeholder="Enter Playlist ID">
+  <input ng-model="customOwner" class="corner-input" placeholder="Enter Playlist Owner">
+  <button type="button" class="corner-button" ui-sref="playlist({id: customID, userid: customOwner})">Go</button>
+</form>
+</div>

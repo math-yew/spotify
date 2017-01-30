@@ -1,0 +1,21 @@
+<div class="main">
+  <div class="search-bar">
+    <div class="search-color"></div>
+    <div class="center">
+      <input placeholder="Search Playlists" ng-model="search">
+      <button ng-click="searchPlaylists(search)">Find</button>
+    </div>
+    <id-dir class="corner"></id-dir>
+  </div>
+  <div class="search-results" ng-repeat="play in playlists">
+
+    <div ui-sref="playlist({id: play.id, userid: play.owner.id, name: play.name, image: play.images[0].url})" class="search">
+      <img src="{{play.images[1].url}}">
+      <p>{{play.name}}</p>
+
+    </div>
+
+
+  </div>
+
+</div>
